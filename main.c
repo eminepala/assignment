@@ -2,10 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int isVowel(char);
-void hyphenate(char[], char[]);
-
-int main() {
+   int main() {
     char word[50] = "", wordHyp[100] = "";
     printf("Enter a word for hyphenation:\n");
     scanf("%s", word);
@@ -13,11 +10,8 @@ int main() {
     printf("%s\n", wordHyp);
     return 0;
 }
-
 int isVowel(char c) {
-    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
-        return 1;
-    return 0;
+    return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 }
 
 void hyphenate(char word[], char wordHyp[]) {
@@ -56,3 +50,4 @@ void hyphenate(char word[], char wordHyp[]) {
     // Ensure the hyphenated word is null-terminated
     wordHyp[hypIndex] = '\0';
 }
+
